@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 
 
 class Student():
@@ -17,9 +17,9 @@ class Student():
         self.finalGrade = finalGrade
 
     @staticmethod
-    def factory(self,firstName,lastName,AdmissionYear,GradYear,DOB,CGPAofEachSem):
-        fullName = fistName+" "+lastName
-        Age =  datetime.date.today().year - DOB.year
+    def factory(firstName,lastName,AdmissionYear,GradYear,DOB,CGPAofEachSem):
+        fullName = firstName+" "+lastName
+        Age =  date.today().year - DOB.year
         
         NoofDropoutYear = GradYear-AdmissionYear-4
         
@@ -58,7 +58,7 @@ class Student():
         setattr(self,property,value)
 
 def main():
-    student = Student.factory("Rohit","Patil",2016,2020,datetime.datetime(1999,2,1),[5,6,8])
+    student = Student.factory("Rohit","Patil",2016,2020,datetime(1999,2,1),[5,6,8])
     student.printValue("fullName")
 
 if __name__=="__main__":
