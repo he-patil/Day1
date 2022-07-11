@@ -61,5 +61,7 @@ def main():
     student = Student.factory("Rohit","Patil",2016,2020,datetime.datetime(1999,2,1),[5,6,8])
     student.printValue("fullName")
 
-                
+if __name__=="__main__":
+    main()
+
             
